@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minhas Tarefas</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <h1 id="logo">Minhas Tarefas</h1>
+  </header>
+
+  <main class="container">
+
+    <section id="tarefas">
+      <h2 class="sr-only">Tarefas</h2>
+      <div class="links">
+
+        <a href="#" onclick="Modal.open()" class="button new">+ Nova Tarefa</a>
+
+        <a href="tarefasAPI.html" class="button new">Tarefas da API</a>
+
+      </div>
+
+
+      <table id="data-table">
+
+        <thead>
+          <tr>
+            <th>Tarefa</th>
+            <th>Adicionado</th>
+            <th>Término</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+  </main>
+  </section>
+
+  <div class="modal-overlay ">
+    <div class="modal">
+      <div id="form">
+        <h2>Nova Tarefa</h2>
+        <form action="" onsubmit="Form.submit(event)">
+          <div class="input-group">
+            <label class="sr-only" for="descricao">Descrição</label>
+            <input type="text" id="descricao" name="descricao" placeholder="Descrição" />
+          </div>
+
+          <div class="input-group">
+            <label class="sr-only" for="date">Data</label>
+            <input type="date" id="date" name="date" />
+            <br>
+            <small class="help">Escolha uma data prevista para o término da tarefa.</small>
+          </div>
+
+          <div class="input-group actions">
+            <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+            <button>Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Minhas Tarefas</p>
+    <p>Made with ❤ by Leshly Ontiveros</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
